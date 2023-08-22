@@ -4,4 +4,83 @@
 @tailwind utilities;
 :root {
   font-family: "Inter", sans-serif;
+}
+
+* {
+  @apply table:overflow-y-auto overflow-hidden;
+}
+
+h1,
+p {
+  font-weight: 700;
+  @apply transition-colors overflow-hidden;
+}
+
+@media screen and (max-width: 720px) {
+  .reveal {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  .reveal.active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  .reveal:nth-child(2n) {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  .reveal:nth-child(2n).active {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 720px) {
+  section > .reveal:nth-child(1) {
+    animation: reveal 0.75s ease-in-out 0.75s backwards;
+  }
+  section > .reveal:nth-child(2) {
+    animation: reveal 0.75s ease-in-out 1.25s backwards;
+  }
+  section > .reveal:nth-child(3) {
+    animation: reveal 0.75s ease-in-out 1.75s backwards;
+  }
+  section > .reveal:nth-child(4) {
+    animation: reveal 0.75s ease-in-out 2.25s backwards;
+  }
+  section > div > .reveal:nth-child(1) {
+    animation: reveal 0.75s ease-in-out 0.53000224s backwards;
+  }
+  section > div > .reveal:nth-child(2) {
+    animation: reveal 0.75s ease-in-out 0.81000448s backwards;
+  }
+  section > div > .reveal:nth-child(3) {
+    animation: reveal 0.75s ease-in-out 1.0900067201s backwards;
+  }
+  section > div > .reveal:nth-child(4) {
+    animation: reveal 0.75s ease-in-out 1.3700089601s backwards;
+  }
+  section > div > .reveal:nth-child(5) {
+    animation: reveal 0.75s ease-in-out 1.6500112001s backwards;
+  }
+  section > div > .reveal:nth-child(6) {
+    animation: reveal 0.75s ease-in-out 1.9300134401s backwards;
+  }
+  section > div > .reveal:nth-child(7) {
+    animation: reveal 0.75s ease-in-out 2.2100156801s backwards;
+  }
+  section > div > .reveal:nth-child(8) {
+    animation: reveal 0.75s ease-in-out 2.4900179201s backwards;
+  }
+  @keyframes reveal {
+    0% {
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 }/*# sourceMappingURL=index.css.map */

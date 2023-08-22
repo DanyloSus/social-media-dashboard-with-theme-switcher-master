@@ -1,0 +1,42 @@
+@media screen and (max-width: 720px) {
+  .reveal {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    &.active {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    &:nth-child(2n) {
+      transform: translateX(150px);
+      opacity: 0;
+      transition: 1s all ease-in-out;
+      &.active {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+  }
+}
+@media screen and (min-width: 720px) {
+  @for $i from 1 through 4 {
+    section > .reveal:nth-child(#{$i}) {
+      animation: reveal 0.75s ease-in-out #{$i/2 + 0.25}s backwards;
+    }
+  }
+  @for $i from 1 through 8 {
+    section > div > .reveal:nth-child(#{$i}) {
+      animation: reveal 0.75s ease-in-out #{$i/3.5714 + 0.25}s backwards;
+    }
+  }
+  @keyframes reveal {
+    0% {
+      transform: translateY(150px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+}

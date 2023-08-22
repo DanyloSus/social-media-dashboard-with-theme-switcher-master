@@ -5,8 +5,8 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        "lime green": "hsl(163, 72%, 41%)",
-        "bright red": "hsl(356, 69%, 56%)",
+        "lime-green": "hsl(163, 72%, 41%)",
+        "bright-red": "hsl(356, 69%, 56%)",
 
         facebook: "hsl(208, 92%, 53%)",
         twitter: "hsl(203, 89%, 53%)",
@@ -30,6 +30,10 @@ module.exports = withMT({
         "card-bg-white": "hsl(227, 47%, 96%)",
         "text-white": "hsl(228, 12%, 44%)",
         "h-text-white": "hsl(230, 17%, 14%)",
+      },
+      screens: {
+        table: { max: "1164px" },
+        phone: { max: "720px" },
       },
     },
   },
