@@ -15,7 +15,7 @@ const Header = () => {
           isDark ? `border-text-dark` : `border-text-white`
         }`}
       />
-      <div className="flex items-center phone:justify-between ml-auto">
+      <div className="flex items-center phone:justify-between ml-auto phone:ml-0">
         <p className="mr-3">Dark Mode</p>
         <Switch
           id="switch"

@@ -93,9 +93,17 @@ const Card = ({
           className="flex items-center gap-1 font-bold text-xs justify-center"
         >
           {todayNum > 0 ? (
-            <img src="./icon-up.svg" alt="icon up" />
+            <img
+              src="./icon-up.svg"
+              alt="icon up"
+              className=" animate-bounce"
+            />
           ) : (
-            <img src="./icon-down.svg" alt="icon down" />
+            <img
+              src="./icon-down.svg"
+              alt="icon down"
+              className=" animate-bounce"
+            />
           )}{" "}
           {todayNum > 0 ? todayNum : todayNum * -1} Today
         </p>
